@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #073C5B;
   background-image: url("./assets/images/waves.png");
@@ -37,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.8vw;
-  line-height: 42px;
+  line-height: 30px;
   text-transform: capitalize;
 }
 
@@ -167,7 +171,7 @@ header .mob-menu {
   background-image: url("./assets/images/bg1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1783px;
+  height: 1693px;
   width: 100%;
 }
 
@@ -190,7 +194,7 @@ header .mob-menu {
 .btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1vw;
+  font-size: 20px;
   height: 50px;
   width: 255px;
   background-color: #F1C301;
@@ -202,7 +206,7 @@ header .mob-menu {
 }
 
 .title_transform {
-  transform: translate(0, 14vw);
+  transform: translate(0, 17vw);
 }
 
 .negativ-margin {
@@ -225,16 +229,16 @@ header .mob-menu {
 .title h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 2.3vw;
+  font-size: 36px;
   text-transform: capitalize;
   text-align: center;
   color: #D7B40F;
-  width: 13em;
-  line-height: 54.86px;
+  width: 10em;
+  line-height: 40px;
 }
 
 .podcast-sec {
-  margin: calc(100vw - 125rem) 0 0 0;
+  margin: calc(100vw - 117rem) 0 0 0;
 }
 
 .mRight {
@@ -370,8 +374,8 @@ header .mob-menu {
 }
 .bg4 .content-wrapper .content ul li::before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #F1C301;
   margin: 0 2rem;
@@ -386,9 +390,10 @@ header .mob-menu {
 }
 
 .bg5 {
-  background-image: url("./assets/images/bg5.png");
+  background-image: url(./assets/images/bg5.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: bottom;
+  background-color: #1a222d;
 }
 .bg5 .separator {
   width: 100%;
@@ -432,6 +437,7 @@ header .mob-menu {
   width: 100%;
   position: relative;
   z-index: 2;
+  background-color: #1a222d;
 }
 .bg5 .content-wrapper .content .location {
   position: relative;
@@ -443,10 +449,10 @@ header .mob-menu {
   color: #D7B40F;
   width: 224px;
   text-align: center;
-  text-shadow: 1px 0 1px #000000;
+  background-color: #1a222d;
 }
 .bg5 .content-wrapper .content:nth-child(odd) {
-  margin: 210px 0 560px 0;
+  margin: 209px 0 412px 0;
 }
 .bg5 .content-wrapper .content:nth-child(odd) .face::after {
   content: "";
@@ -499,7 +505,7 @@ footer p {
   font-style: italic;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
   section h1 {
     width: 100%;
   }
@@ -520,7 +526,7 @@ footer p {
     height: 14vw;
   }
   .content-wrapper .content p {
-    font-size: 1vw;
+    font-size: 18px;
   }
   .content-wrapper .content img {
     height: 100%;
@@ -529,11 +535,11 @@ footer p {
     font-size: 1vw;
   }
   .content-wrapper .content h4 {
-    font-size: 1.8vw;
+    font-size: 20px;
   }
 
   .btn {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .podcast-sec {
@@ -546,7 +552,7 @@ footer p {
 }
 @media screen and (max-width: 1460px) {
   .podcast-sec {
-    margin: calc(100vw - 117rem) 0 0 0;
+    margin: calc(100vw - 112rem) 0 0 0;
   }
 }
 @media screen and (max-width: 1360px) {
@@ -583,7 +589,7 @@ footer p {
   }
 
   .title_transform {
-    transform: translate(0, 16vw);
+    transform: translate(0, 26vw);
   }
 
   .content {
@@ -611,7 +617,7 @@ footer p {
   }
 
   .podcast-sec {
-    margin: calc(100vw - 110rem) 0 0 0;
+    margin: calc(100vw - 103rem) 0 0 0;
   }
 
   .bg3 .content-wrapper {
@@ -642,16 +648,12 @@ footer p {
 }
 @media screen and (max-width: 1250px) {
   .title_transform {
-    transform: translate(0, 14em);
+    transform: translate(0, 26em);
   }
 }
 @media screen and (max-width: 1150px) {
-  .title_transform {
-    transform: translate(0, 17em);
-  }
-
   .podcast-sec {
-    margin: calc(100vw - 98rem) 0 0 0;
+    margin: calc(100vw - 90rem) 0 0 0;
   }
 
   .bg3 .content-wrapper {
@@ -695,6 +697,7 @@ footer p {
     justify-content: center;
     flex-flow: column;
     padding: 0 5px;
+    margin: 2rem 0 14rem 0;
   }
   .bg5 .content-wrapper .content {
     flex-flow: row;
@@ -703,15 +706,17 @@ footer p {
   }
   .bg5 .content-wrapper .content h6 {
     width: 45%;
+    background-color: transparent;
   }
   .bg5 .content-wrapper .content .location {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
   }
   .bg5 .content-wrapper .content:nth-child(odd) {
-    margin: 0;
+    margin: 2rem 0;
   }
   .bg5 .content-wrapper .content:nth-child(odd) .face::after {
     display: none;
@@ -751,11 +756,11 @@ footer p {
   }
 
   .title_transform {
-    transform: translate(0, 21vw);
+    transform: translate(0, 40vw);
   }
 
   .podcast-sec {
-    margin: calc(145vw - 110rem) 0 0 0;
+    margin: calc(120vw - 90rem) 0 0 0;
   }
 
   .bg4 .content-wrapper .content ul li::before {
@@ -773,7 +778,7 @@ footer p {
 }
 @media screen and (max-width: 830px) {
   .title_transform {
-    transform: translate(0, 26vw);
+    transform: translate(0, 50vw);
   }
 
   .text-content p {
@@ -781,7 +786,7 @@ footer p {
   }
 
   .podcast-sec {
-    margin: calc(145vw - 100rem) 0 0 0;
+    margin: calc(145vw - 90rem) 0 0 0;
   }
 
   .bg4 .content-wrapper .content ul li {
@@ -789,8 +794,8 @@ footer p {
   }
   .bg4 .content-wrapper .content ul li::before {
     margin: 0.5rem 1rem;
-    width: 18px;
-    height: 18px;
+    width: 10px;
+    height: 10px;
   }
 
   .bg5 .content-wrapper .content {
@@ -812,7 +817,7 @@ footer p {
   }
 
   .title_transform {
-    transform: translate(0, 77vw);
+    transform: translate(0, 90vw);
   }
 
   .title {
@@ -822,15 +827,15 @@ footer p {
     font-size: 4.3vw;
   }
 
-  .podcast-sec {
-    margin: calc(145vw - 100rem) 0 0 0;
-  }
-
   .bg5 .content-wrapper .content {
     width: 100%;
   }
 }
 @media screen and (max-width: 674px) {
+  .btn {
+    font-size: 16px;
+  }
+
   .title_transform {
     transform: translate(0, 100vw);
   }
@@ -841,6 +846,9 @@ footer p {
 
   .bg5 h5 {
     margin: 2rem 0;
+  }
+  .bg5 .content-wrapper {
+    margin: 2rem 0 20rem 0;
   }
   .bg5 .content-wrapper .content {
     flex-flow: column;
@@ -869,7 +877,7 @@ footer p {
 }
 @media screen and (max-width: 512px) {
   header {
-    padding: 14px 5px;
+    padding: 14px 15px;
   }
   header .logos {
     width: 40vw;
@@ -884,7 +892,7 @@ footer p {
 
   .content-wrapper {
     width: 100%;
-    padding: 0 5px;
+    padding: 0 15px;
   }
 
   .title h2 {

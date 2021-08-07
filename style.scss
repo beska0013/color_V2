@@ -7,10 +7,14 @@
   user-select: none;
   box-sizing: border-box;
 }
+html,body{
+  scroll-behavior: smooth;
+}
 body{
   background-color: #073C5B;
   @include background("./assets/images/waves.png");
   background-attachment: fixed;
+
 }
 li{
   list-style: none;
@@ -33,7 +37,7 @@ button{
 }
 h1,h2,h3,h4,h5,h6{
   @include font('Montserrat', 700, 1.8vw);
-  line-height: 42px;
+  line-height: 30px;
   text-transform: capitalize;
 }
 
@@ -143,7 +147,8 @@ header {
 }
 .bg1{
   @include background("./assets/images/bg1.png");
-  height: 1783px;
+  //height: 1783px;
+  height:  1693px;
   width: 100%;
 }
 .text-content{
@@ -160,16 +165,15 @@ header {
   }
 }
 .btn{
-  @include font('Montserrat', 700, 1vw);
+  @include font('Montserrat', 700, 20px);
   @include size(50px,255px);
   background-color: #F1C301;
   text-transform: capitalize;
-
 }
 
 .d-none{ display: none;}
 .title_transform{
-  transform: translate(0, 14vw);
+  transform: translate(0, 17vw);
 }
 .negativ-margin{
   margin: calc(70vw - 110rem) 0 0 0;
@@ -184,19 +188,19 @@ header {
   @include flex(center);
   width:100%;
   h2{
-    @include font('Montserrat', 700, 2.3vw);
+    @include font('Montserrat', 700, 36px);
     text-transform: capitalize;
     text-align: center;
     color: #D7B40F;
-    width: 13em;
-    line-height: 54.86px;
+    width: 10em;
+    line-height: 40px;
   }
 }
 //--section one end--//
 
 //section two--//
 .podcast-sec{
-  margin: calc(100vw - 125rem) 0 0 0;
+  margin: calc(100vw - 117rem) 0 0 0;
 }
 .mRight{
   margin: 10rem 0 10rem 7.3rem;
@@ -320,7 +324,7 @@ header {
           margin: 0 0 100px 0;
           &::before{
             content:"";
-            @include square(24px);
+            @include square(16px);
             border-radius: 50%;
             background-color: #F1C301;
             margin: 0 2rem;
@@ -344,7 +348,10 @@ header {
 //--section-four--//
 
 .bg5 {
-  @include background("./assets/images/bg5.png");
+  background-image: url(./assets/images/bg5.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #1a222d;
   .separator {
     @include square(100%);
     img {
@@ -376,6 +383,7 @@ header {
         width: 100%;
         position: relative;
         z-index: 2;
+         background-color: #1a222d;
       }
       .location {
         position: relative;
@@ -384,10 +392,10 @@ header {
         color: #D7B40F;
         width: 224px;
         text-align: center;
-        text-shadow: 1px 0 1px #000000;
+        background-color: #1a222d;
       }
       &:nth-child(odd){
-        margin: 210px 0 560px 0;
+        margin: 209px 0 412px 0;
         .face::after{
           content:'';
           top: 178px;
@@ -446,7 +454,7 @@ footer{
 }
 //--footer end--//
 //--media query--//
-@media screen and (min-width: 1920px){
+@media screen and (min-width: 1921px){
   section h1 {
     width: 100%;
   }
@@ -463,7 +471,7 @@ footer{
     .content {
       height: 14vw;
       p {
-        font-size: 1vw;
+        font-size: 18px;
       }
       img {
         height: 100%;
@@ -472,12 +480,12 @@ footer{
         font-size: 1vw;
       }
       h4{
-        font-size: 1.8vw;
+        font-size: 20px;
       }
     }
   }
   .btn {
-    font-size: 24px;
+    font-size: 20px;
   }
   .podcast-sec {
     margin: -10rem 0 10rem 0;
@@ -486,9 +494,10 @@ footer{
     transform: translate(0, 18vw);
   }
 }
+
 @media screen and (max-width: 1460px){
   .podcast-sec{
-    margin: calc(100vw - 117rem) 0 0 0;
+    margin: calc(100vw - 112rem) 0 0 0;
   }
 }
 
@@ -526,7 +535,7 @@ footer{
 
   }
   .title_transform {
-    transform: translate(0, 16vw);
+    transform: translate(0, 26vw);
   }
   .content {
     align-items: center;
@@ -552,7 +561,7 @@ footer{
     flex-flow: column-reverse;
   }
   .podcast-sec {
-    margin: calc(100vw - 110rem) 0 0 0;
+    margin: calc(100vw - 103rem) 0 0 0;
   }
   .bg3 {
     .content-wrapper {
@@ -598,16 +607,13 @@ footer{
 
 @media screen and (max-width: 1250px){
   .title_transform {
-    transform: translate(0, 14em);
+    transform: translate(0, 26em);
   }
 }
 
 @media screen and (max-width: 1150px){
-  .title_transform {
-    transform: translate(0, 17em);
-  }
   .podcast-sec {
-    margin: calc(100vw - 98rem) 0 0 0;
+    margin: calc(100vw - 90rem) 0 0 0;
   }
   .bg3{
     .content-wrapper{
@@ -653,18 +659,21 @@ footer{
       justify-content: center;
       flex-flow: column;
       padding: 0 5px;
+      margin: 2rem 0 14rem 0;
       .content{
         flex-flow: row;
         align-items: center;
         width: 70%;
         h6{
           width: 45%;
+          background-color: transparent;
         }
         .location {
           @include flex(center,column);
+          background-color: transparent;
         }
         &:nth-child(odd){
-          margin:  0;
+          margin:  2rem 0;
           .face::after{
             display: none;
           }
@@ -712,10 +721,10 @@ footer{
     margin: -45rem 0 0 0;
   }
   .title_transform {
-    transform: translate(0, 21vw);
+    transform: translate(0, 40vw);
   }
   .podcast-sec {
-    margin: calc(145vw - 110rem) 0 0 0;
+    margin: calc(120vw - 90rem) 0 0 0;
   }
   .bg4 {
     .content-wrapper {
@@ -744,13 +753,13 @@ footer{
 
 @media screen and (max-width: 830px){
   .title_transform {
-    transform: translate(0, 26vw);
+    transform: translate(0, 50vw);
   }
   .text-content p {
     font-size: 14px;
   }
   .podcast-sec {
-    margin: calc(145vw - 100rem) 0 0 0;
+    margin: calc(145vw - 90rem) 0 0 0;
   }
   .bg4 {
     .content-wrapper {
@@ -759,7 +768,7 @@ footer{
           align-items: start;
           &::before{
             margin: .5rem 1rem;
-            @include square(18px);
+            @include square(10px);
           }
         }
 
@@ -787,7 +796,7 @@ footer{
     line-height: 25px;
   }
   .title_transform {
-    transform: translate(0, 77vw);
+    transform: translate(0, 90vw);
   }
   .title {
     justify-content: flex-end;
@@ -795,9 +804,6 @@ footer{
       font-size: 4.3vw;
     }
 
-  }
-  .podcast-sec {
-    margin: calc(145vw - 100rem) 0 0 0;
   }
   .bg5 {
     .content-wrapper{
@@ -809,6 +815,9 @@ footer{
 }
 
 @media screen and (max-width: 674px){
+  .btn {
+    font-size: 16px;
+  }
   .title_transform {
     transform: translate(0, 100vw);
   }
@@ -820,6 +829,7 @@ footer{
       margin: 2rem 0;
     }
     .content-wrapper{
+      margin: 2rem 0 20rem 0;
       .content{
         flex-flow: column;
         h6{
@@ -857,7 +867,7 @@ footer{
 
 @media screen and (max-width: 512px){
   header{
-    padding: 14px 5px;
+    padding: 14px 15px;
     .logos{
       width: 40vw;
       min-width: 180px;
@@ -871,7 +881,7 @@ footer{
   }
   .content-wrapper {
     width: 100%;
-    padding: 0 5px;
+    padding: 0 15px;
   }
   .title {
     h2{font-size: 5.3vw;}
