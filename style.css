@@ -393,6 +393,7 @@ header .mob-menu {
   background-image: url(./assets/images/bg5.png);
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
   background-color: #1a222d;
 }
 .bg5 .separator {
