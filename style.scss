@@ -36,7 +36,7 @@ button{
   cursor: pointer;
 }
 h1,h2,h3,h4,h5,h6{
-  @include font('Montserrat', 700, 1.8vw);
+  @include font('Montserrat', 700, 30px);
   line-height: 30px;
   text-transform: capitalize;
 }
@@ -45,7 +45,7 @@ section{
   @include flex(center,column);
   h1{
     color: rgba(33, 77, 104, 1);
-    width: 26rem;
+    width: 24rem;
   }
 }
 //--header--//
@@ -59,7 +59,7 @@ header {
   @include background("./assets/images/svg/headerBg.svg");
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   min-height: 120px;
   align-items: flex-start;
   padding: 14px 0;
@@ -141,9 +141,9 @@ header {
 
 //--section one--//
 .content-wrapper{
+  @include flex(start);
   width: 80%;
   max-width: 1115px;
-  display: flex;
 }
 .bg1{
   @include background("./assets/images/bg1.png");
@@ -152,28 +152,28 @@ header {
   width: 100%;
 }
 .text-content{
-  width: calc(56% + 1vw);
+  width: calc(100% + -30vw);
   p{
-    @include font('Montserrat', 400, 1vw);
+    @include font('Montserrat', 400, 16px);
     color: #214D68;
-    line-height: 34.58px;
+    line-height: 30.58px;
     text-align: justify;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
     span{
       color: #D7B40F;
     }
   }
 }
 .btn{
-  @include font('Montserrat', 700, 20px);
-  @include size(50px,255px);
+  @include font('Montserrat', 700, 16px);
+  @include size(45px,195px);
   background-color: #F1C301;
   text-transform: capitalize;
 }
 
 .d-none{ display: none;}
 .title_transform{
-  transform: translate(0, 17vw);
+  transform: translate(0, 19vw);
 }
 .negativ-margin{
   margin: calc(70vw - 110rem) 0 0 0;
@@ -183,12 +183,13 @@ header {
   flex-flow: column;
   justify-content: flex-end;
   margin: 0 0 0 5rem;
+  height: 100%;
 }
 .title{
   @include flex(center);
   width:100%;
   h2{
-    @include font('Montserrat', 700, 36px);
+    @include font('Montserrat', 700, 32px);
     text-transform: capitalize;
     text-align: center;
     color: #D7B40F;
@@ -201,6 +202,9 @@ header {
 //section two--//
 .podcast-sec{
   margin: calc(100vw - 117rem) 0 0 0;
+  .content-wrapper{
+    @include flex(center);
+  }
 }
 .mRight{
   margin: 10rem 0 10rem 7.3rem;
@@ -208,7 +212,7 @@ header {
 .content {
   @include flex(between, column);
   align-items: flex-start;
-  height: 290px;
+  height: 268px;
   margin: 0 3rem 0 0;
   &:hover img{
     transform: scale(1.2);
@@ -231,6 +235,7 @@ header {
   }
   img{
     @include transition(transform);
+    width: 500px;
   }
 }
 
@@ -254,7 +259,7 @@ header {
     .content{
       align-items: center;
       height: inherit;
-      padding: 2.2rem 1.5rem;
+      padding: 1rem;
       margin: 0;
       @include transition(background-color);
       //&:hover{
@@ -266,16 +271,16 @@ header {
       //  }
       //}
       h3{
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 700;
         width: 100%;
-        padding: 2.35rem 0;
+        padding: 1rem 0;
       }
       p{
-        line-height: 35px;
+        line-height: 30px;
         width: 100%;
-        font-size: 20px;
-        text-align: justify;
+        font-size: 18px;
+        text-align: start;
         color: #ffffff;
         @include transition(color);
       }
@@ -290,6 +295,7 @@ header {
     }
   }
 }
+
 .bg4{
   background-color: #ffffff;
   display: flex;
@@ -298,30 +304,30 @@ header {
   width: 100%;
   .content-wrapper{
     justify-content: flex-start;
+    padding: 0 1rem;
     .content{
       align-items: center;
       height: inherit;
       margin: 0;
       @include transition(background-color);
       h3{
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 700;
         width: 100%;
         padding: 2.35rem 0;
       }
       p,ul li p{
-        @include font('Montserrat', 400, 35px);
+        @include font('Montserrat', 400, 18px);
         width: 100%;
-        font-size: 20px;
         text-align: start;
         color: #214D68;
         @include transition(color);
       }
       ul{
-        margin: 70px 0;
+        margin: 70px 0 0 0;
         li{
           @include flex(between);
-          margin: 0 0 100px 0;
+          margin: 0 0 50px 0;
           &::before{
             content:"";
             @include square(16px);
@@ -342,11 +348,9 @@ header {
     }
   }
 }
-
 //--section three end--//
 
 //--section-four--//
-
 .bg5 {
   background-image: url(./assets/images/bg5.png);
   background-repeat: no-repeat;
@@ -368,8 +372,9 @@ header {
     max-width:1216px;
     .content{
       align-items: center;
+      margin: 0 3rem 32.5rem 0;
       .face{
-        @include square(178px);
+        @include square(150px);
         @include  flex(center,column);
         position: relative;
         z-index: 2;
@@ -399,7 +404,7 @@ header {
         margin: 209px 0 412px 0;
         .face::after{
           content:'';
-          top: 178px;
+          top: 150px;
           position: absolute;
           z-index: -1;
           height: 268px;
@@ -410,10 +415,10 @@ header {
       &:nth-child(even){
         .face::after{
           content:'';
-          top: 178px;
+          top: 150px;
           position: absolute;
           z-index: -1;
-          height: 514px;
+          height: 468px;
           background-color: #91742D;
           width: 7px;
         }
@@ -422,7 +427,7 @@ header {
         transform: translate(0, 66px);
         .face::after{
           content:'';
-          top: 178px;
+          top: 150px;
           position: absolute;
           z-index: -1;
           height: 194px;
@@ -457,13 +462,20 @@ footer{
 //--media query--//
 @media screen and (min-width: 1921px){
   section h1 {
-    width: 100%;
+    font-size: 1.5vw;
+    width: 19vw;
   }
   .bg1{
     height: 100vw;
   }
   .negativ-margin {
     margin: -30rem 0 0 0px;
+  }
+  .text-content {
+    width: 560px;
+    p{
+      font-size: .8vw;
+    }
   }
   .content-wrapper {
     max-width: 2000px;
@@ -486,13 +498,13 @@ footer{
     }
   }
   .btn {
-    font-size: 20px;
+    font-size: .8vw;
   }
   .podcast-sec {
     margin: -10rem 0 10rem 0;
   }
   .title_transform {
-    transform: translate(0, 18vw);
+    transform: translate(0, 15vw);
   }
 }
 
@@ -598,7 +610,10 @@ footer{
       flex-flow: row;
       .content{
         &:nth-child(even){
-          margin: 0 0 560px 0;
+          margin: 0 0 420px 0;
+        }
+        &:nth-child(odd){
+          margin: 209px 0 260px 0;
         }
       }
     }
@@ -696,7 +711,6 @@ footer{
       }
     }
 }
-
 
 @media screen and (max-width: 1020px){
 
@@ -830,7 +844,7 @@ footer{
       margin: 2rem 0;
     }
     .content-wrapper{
-      margin: 2rem 0 20rem 0;
+      margin: 2rem 0 10rem 0;
       .content{
         flex-flow: column;
         h6{
@@ -943,7 +957,7 @@ footer{
 
 @media screen and (max-width: 392px){
   .negativ-margin {
-    margin: -70rem 0 0 0;
+    margin: -66rem 0 0 0;
   }
   .bg1{
     height: 2500px;

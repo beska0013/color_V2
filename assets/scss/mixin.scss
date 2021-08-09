@@ -14,6 +14,12 @@
   @else if $spacing == center{
     justify-content:center;
   }
+  @else if $spacing == start{
+    justify-content: flex-start;
+  }
+  @else if $spacing == end{
+    justify-content: flex-end;
+  }
   align-items:center;
 }
 

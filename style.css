@@ -40,7 +40,7 @@ button {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1.8vw;
+  font-size: 30px;
   line-height: 30px;
   text-transform: capitalize;
 }
@@ -53,7 +53,7 @@ section {
 }
 section h1 {
   color: #214d68;
-  width: 26rem;
+  width: 24rem;
 }
 
 .header-height {
@@ -72,7 +72,7 @@ header {
   background-size: cover;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   min-height: 120px;
   align-items: flex-start;
   padding: 14px 0;
@@ -162,9 +162,11 @@ header .mob-menu {
 }
 
 .content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 80%;
   max-width: 1115px;
-  display: flex;
 }
 
 .bg1 {
@@ -176,16 +178,16 @@ header .mob-menu {
 }
 
 .text-content {
-  width: calc(56% + 1vw);
+  width: calc(100% + -30vw);
 }
 .text-content p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 16px;
   color: #214D68;
-  line-height: 34.58px;
+  line-height: 30.58px;
   text-align: justify;
-  margin: 2rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 .text-content p span {
   color: #D7B40F;
@@ -194,9 +196,9 @@ header .mob-menu {
 .btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  height: 50px;
-  width: 255px;
+  font-size: 16px;
+  height: 45px;
+  width: 195px;
   background-color: #F1C301;
   text-transform: capitalize;
 }
@@ -206,7 +208,7 @@ header .mob-menu {
 }
 
 .title_transform {
-  transform: translate(0, 17vw);
+  transform: translate(0, 19vw);
 }
 
 .negativ-margin {
@@ -218,6 +220,7 @@ header .mob-menu {
   flex-flow: column;
   justify-content: flex-end;
   margin: 0 0 0 5rem;
+  height: 100%;
 }
 
 .title {
@@ -229,7 +232,7 @@ header .mob-menu {
 .title h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 32px;
   text-transform: capitalize;
   text-align: center;
   color: #D7B40F;
@@ -239,6 +242,11 @@ header .mob-menu {
 
 .podcast-sec {
   margin: calc(100vw - 117rem) 0 0 0;
+}
+.podcast-sec .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mRight {
@@ -251,7 +259,7 @@ header .mob-menu {
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
-  height: 290px;
+  height: 268px;
   margin: 0 3rem 0 0;
 }
 .content:hover img {
@@ -281,6 +289,7 @@ header .mob-menu {
 }
 .content img {
   transition: transform 0.3s ease-in-out;
+  width: 500px;
 }
 
 .h3Blue {
@@ -304,21 +313,21 @@ header .mob-menu {
 .bg3 .content-wrapper .content {
   align-items: center;
   height: inherit;
-  padding: 2.2rem 1.5rem;
+  padding: 1rem;
   margin: 0;
   transition: background-color 0.3s ease-in-out;
 }
 .bg3 .content-wrapper .content h3 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
   width: 100%;
-  padding: 2.35rem 0;
+  padding: 1rem 0;
 }
 .bg3 .content-wrapper .content p {
-  line-height: 35px;
+  line-height: 30px;
   width: 100%;
-  font-size: 20px;
-  text-align: justify;
+  font-size: 18px;
+  text-align: start;
   color: #ffffff;
   transition: color 0.3s ease-in-out;
 }
@@ -340,6 +349,7 @@ header .mob-menu {
 }
 .bg4 .content-wrapper {
   justify-content: flex-start;
+  padding: 0 1rem;
 }
 .bg4 .content-wrapper .content {
   align-items: center;
@@ -348,7 +358,7 @@ header .mob-menu {
   transition: background-color 0.3s ease-in-out;
 }
 .bg4 .content-wrapper .content h3 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
   width: 100%;
   padding: 2.35rem 0;
@@ -356,21 +366,20 @@ header .mob-menu {
 .bg4 .content-wrapper .content p, .bg4 .content-wrapper .content ul li p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 18px;
   width: 100%;
-  font-size: 20px;
   text-align: start;
   color: #214D68;
   transition: color 0.3s ease-in-out;
 }
 .bg4 .content-wrapper .content ul {
-  margin: 70px 0;
+  margin: 70px 0 0 0;
 }
 .bg4 .content-wrapper .content ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 100px 0;
+  margin: 0 0 50px 0;
 }
 .bg4 .content-wrapper .content ul li::before {
   content: "";
@@ -416,10 +425,11 @@ header .mob-menu {
 }
 .bg5 .content-wrapper .content {
   align-items: center;
+  margin: 0 3rem 32.5rem 0;
 }
 .bg5 .content-wrapper .content .face {
-  width: 178px;
-  height: 178px;
+  width: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -457,7 +467,7 @@ header .mob-menu {
 }
 .bg5 .content-wrapper .content:nth-child(odd) .face::after {
   content: "";
-  top: 178px;
+  top: 150px;
   position: absolute;
   z-index: -1;
   height: 268px;
@@ -466,10 +476,10 @@ header .mob-menu {
 }
 .bg5 .content-wrapper .content:nth-child(even) .face::after {
   content: "";
-  top: 178px;
+  top: 150px;
   position: absolute;
   z-index: -1;
-  height: 514px;
+  height: 468px;
   background-color: #91742D;
   width: 7px;
 }
@@ -478,7 +488,7 @@ header .mob-menu {
 }
 .bg5 .content-wrapper .content:nth-child(3) .face::after {
   content: "";
-  top: 178px;
+  top: 150px;
   position: absolute;
   z-index: -1;
   height: 194px;
@@ -508,7 +518,8 @@ footer p {
 
 @media screen and (min-width: 1921px) {
   section h1 {
-    width: 100%;
+    font-size: 1.5vw;
+    width: 19vw;
   }
 
   .bg1 {
@@ -517,6 +528,13 @@ footer p {
 
   .negativ-margin {
     margin: -30rem 0 0 0px;
+  }
+
+  .text-content {
+    width: 560px;
+  }
+  .text-content p {
+    font-size: 0.8vw;
   }
 
   .content-wrapper {
@@ -540,7 +558,7 @@ footer p {
   }
 
   .btn {
-    font-size: 20px;
+    font-size: 0.8vw;
   }
 
   .podcast-sec {
@@ -548,7 +566,7 @@ footer p {
   }
 
   .title_transform {
-    transform: translate(0, 18vw);
+    transform: translate(0, 15vw);
   }
 }
 @media screen and (max-width: 1460px) {
@@ -644,7 +662,10 @@ footer p {
     flex-flow: row;
   }
   .bg5 .content-wrapper .content:nth-child(even) {
-    margin: 0 0 560px 0;
+    margin: 0 0 420px 0;
+  }
+  .bg5 .content-wrapper .content:nth-child(odd) {
+    margin: 209px 0 260px 0;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -849,7 +870,7 @@ footer p {
     margin: 2rem 0;
   }
   .bg5 .content-wrapper {
-    margin: 2rem 0 20rem 0;
+    margin: 2rem 0 10rem 0;
   }
   .bg5 .content-wrapper .content {
     flex-flow: column;
@@ -949,7 +970,7 @@ footer p {
 }
 @media screen and (max-width: 392px) {
   .negativ-margin {
-    margin: -70rem 0 0 0;
+    margin: -66rem 0 0 0;
   }
 
   .bg1 {
